@@ -1,0 +1,15 @@
+spring:
+  # H2内存数据库
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:batchtest;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true # 开启h2控制台
+  batch:
+    jdbc:
+      initialize-schema: always # 自动创建batch元数据表
+    job:
+      enabled: false # 禁止项目启动自动执行任务，手动/测试触发
